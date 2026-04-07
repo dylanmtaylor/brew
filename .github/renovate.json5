@@ -4,11 +4,12 @@
     "github>ublue-os/renovate-config:org-inherited-config"
   ],
 
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["^BREW_VERSION$"],
       "matchStrings": [
-        "^(?<currentValue>.*)"
+        "^(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "Homebrew/brew"
